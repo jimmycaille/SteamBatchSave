@@ -9,13 +9,13 @@ REM #####################################
 REM all folders must exist !
 SET bkpfolder=D:\steambkp
 SET app[1].name=Cities Skyline
-SET app[1].path=D:\steambkp\games\city
+SET app[1].path=D:\steamapps\games\city
 SET app[2].name=GTA IV
-SET app[2].path=D:\steambkp\games\gta
+SET app[2].path=D:\steamapps\games\gta
 SET app[3].name=Portal 2
-SET app[3].path=D:\steambkp\games\portal
+SET app[3].path=D:\steamapps\games\portal
 SET app[4].name=Game 4
-SET app[4].path=D:\steambkp\games\game 4
+SET app[4].path=D:\steamapps\games\game 4
 SET /a appNbr=4
 
 REM adapt if date is not DD.MM.YYYY
@@ -72,6 +72,7 @@ for /l %%n in (1,1,%appNbr%) do (
 	   xcopy !app[%%n].path! /Q
    ) else (
       echo ### Nothing to backup for !app[%%n].name!...
+	  echo are you sure the folder exists ?
    )
 )
 echo.
